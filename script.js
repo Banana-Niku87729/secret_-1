@@ -144,7 +144,6 @@ const instructions = document.getElementById("instructions");
 // DOMの読み込み確認
 if (!dialogueBox || !instructions) {
   console.error("dialogueBoxまたはinstructionsが見つかりません。HTMLを確認してください。");
-  return;
 }
 
 // 会話を進める関数
