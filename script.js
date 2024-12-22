@@ -9,13 +9,18 @@ let currentDialogueIndex = 0;
 const dialogueBox = document.getElementById("dialogue-box");
 const instructions = document.getElementById("instructions");
 
+// DOMの読み込み確認
+if (!dialogueBox || !instructions) {
+  console.error("dialogueBoxまたはinstructionsが見つかりません。HTMLを確認してください。");
+}
+
 // 会話を進める関数
 function updateDialogue() {
   // 初回操作で説明を隠す
   if (instructions.style.display !== "none") {
     instructions.style.display = "none";
   }
-  
+
   // 会話の表示
   if (currentDialogueIndex < dialogues.length) {
     dialogueBox.textContent = dialogues[currentDialogueIndex];
