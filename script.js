@@ -6,15 +6,19 @@ const dialogues = [
 ];
 
 let currentDialogueIndex = 0;
-
 const dialogueBox = document.getElementById("dialogue-box");
+const instructions = document.getElementById("instructions");
 
 function updateDialogue() {
+  if (instructions.style.display !== "none") {
+    instructions.style.display = "none"; // 説明を非表示
+  }
+  
   if (currentDialogueIndex < dialogues.length) {
     dialogueBox.textContent = dialogues[currentDialogueIndex];
     currentDialogueIndex++;
   } else {
-    dialogueBox.textContent = "End Talking";
+    dialogueBox.textContent = "会話が終了しました。";
   }
 }
 
@@ -27,3 +31,6 @@ document.addEventListener("keydown", (event) => {
     updateDialogue();
   }
 });
+
+// 初期状態の設定
+dialogueBox.textContent = "Click or SpaceBar";
