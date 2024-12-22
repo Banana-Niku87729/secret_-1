@@ -7,6 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #fff;
 }
 
 #game-container {
@@ -15,12 +16,24 @@ body {
   text-align: center;
 }
 
+#instructions {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 #dialogue-box {
-  background: #ffffff;
-  border: 2px solid #333;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 20px;
   font-size: 18px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
