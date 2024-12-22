@@ -109,10 +109,15 @@ getLocation()
   .then((location) => {
     if (location === "日本") {
       dialogues.push("まぁ、そりゃそうか...");
+      dialogues.push("あ、いや、なんでもないです。");
     } else {
-      dialogues.push(
-        `あなたは海外に住んでいますね。${location}ですか？興味深いですね。`
-      );
+      dialogues.push("...");
+      dialogues.push("...？");
+      dialogues.push("...は？");
+      dialogues.push("お前、日本に住んでいるよな？？");
+      dialogues.push("俺のデータでは${location}という結果が出たのだが。");
+      dialogues.push("お前、何をしている？");
+      dialogues.push("何を隠している？？？");
     }
   })
   .catch((error) => {
