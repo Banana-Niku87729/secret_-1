@@ -121,7 +121,7 @@ getLocation()
     }
   })
   .catch((error) => {
-    dialogues.push(`位置情報に関してエラーが発生しました: ${error}`);
+    dialogues.push(`...`);
   });
 
 let currentDialogueIndex = 0;
