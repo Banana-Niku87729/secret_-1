@@ -115,13 +115,26 @@ getLocation()
       dialogues.push("...？");
       dialogues.push("...は？");
       dialogues.push("お前、日本に住んでいるよな？？");
-      dialogues.push("俺のデータでは${location}という結果が出たのだが。");
+      dialogues.push(`俺のデータでは${location}という結果が出たのだが。`);
       dialogues.push("お前、何をしている？");
       dialogues.push("何を隠している？？？");
     }
+    // 位置情報後に通常の会話に戻す
+    dialogues.push("おやおや、また表情が暗くなりましたね。");
+    dialogues.push("簡単ですよ、JSのありとあらゆることをして...");
+    dialogues.push("おっと、これ以上説明するとあなたのNounai_SystemがClashしてしまいますね。");
+    dialogues.push("まぁ、おみくじの結果は大吉...ですかね。");
+    dialogues.push("じゃあね。")
+    dialogues.push("君と話してて楽しかったよ。");
+    dialogues.push("あ、ちなみに年月のところはしっかりプログラミングしてるよ^^")
   })
   .catch((error) => {
-    dialogues.push(`...`);
+    dialogues.push("...なんだこれ。");
+    // 位置情報エラー後に通常の会話に戻す
+    dialogues.push("...まぁいいや。");
+    dialogues.push("なんだか私の斜め上な結果になりましたが。");
+    dialogues.push("貴重なお時間を削ってまで話してくれてありがとね。");
+    dialogues.push("じゃあ、またどこかで会えたら")
   });
 
 let currentDialogueIndex = 0;
@@ -131,6 +144,7 @@ const instructions = document.getElementById("instructions");
 // DOMの読み込み確認
 if (!dialogueBox || !instructions) {
   console.error("dialogueBoxまたはinstructionsが見つかりません。HTMLを確認してください。");
+  return;
 }
 
 // 会話を進める関数
